@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Time tracking dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="main-container">
+      <div class="profile-container">
+        <div class="profile">
+          <div class="profile-pic">
+            <img src="images\image-jeremy.png" alt="Jeremy's picture" />
+          </div>
+          <div class="profile-desc">
+            <p>Report for</p>
+            <p class="name">Jeremy Robson</p>
+          </div>
+        </div>
+        <div class="time-interval">
+          <div class="interval">
+            <p class="interval-p active" onclick="handleEvent()">Daily</p>
+            <p class="interval-p" onclick="handleEvent()">Weekly</p>
+            <p class="interval-p" onclick="handleEvent()">Monthly</p>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="dashboard-card top">
+          <div class="card-bg work">
+            <img src="images\icon-work.svg" alt="Work BG" />
+          </div>
+          <div class="card">
+            <div class="card-left">
+              <p class="title">Work</p>
+              <p class="time">32hrs</p>
+            </div>
+            <div class="card-right">
+              <div class="menu">...</div>
+            </div>
+            <div class="card-right-lower">
+              <div class="stats">
+                <p>Last Week - <span class="time">36hrs</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dashboard-card top">
+          <div class="card-bg play">
+            <img src="images\icon-play.svg" alt="Play BG" />
+          </div>
+          <div class="card">
+            <div class="card-left">
+              <p class="title">Play</p>
+              <p class="time">10hrs</p>
+            </div>
+            <div class="card-right">
+              <div class="menu">...</div>
+            </div>
+            <div class="card-right-lower">
+              <div class="stats">
+                <p>Last Week - <span class="time">8hrs</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dashboard-card top">
+          <div class="card-bg study">
+            <img src="images\icon-study.svg" alt="Study BG" />
+          </div>
+          <div class="card">
+            <div class="card-left">
+              <p class="title">Study</p>
+              <p class="time">4hrs</p>
+            </div>
+            <div class="card-right">
+              <div class="menu">...</div>
+            </div>
+            <div class="card-right-lower">
+              <div class="stats">
+                <p>Last Week - <span class="time">7hrs</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dashboard-card">
+          <div class="card-bg exercise">
+            <img src="images\icon-exercise.svg" alt="Excercise BG" />
+          </div>
+          <div class="card">
+            <div class="card-left">
+              <p class="title">Exercise</p>
+              <p class="time">4hrs</p>
+            </div>
+            <div class="card-right">
+              <div class="menu">...</div>
+            </div>
+            <div class="card-right-lower">
+              <div class="stats">
+                <p>Last Week - <span class="time">5hrs</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dashboard-card">
+          <div class="card-bg social">
+            <img src="images\icon-social.svg" alt="Social BG" />
+          </div>
+          <div class="card">
+            <div class="card-left">
+              <p class="title">Social</p>
+              <p class="time">5hrs</p>
+            </div>
+            <div class="card-right">
+              <div class="menu">...</div>
+            </div>
+            <div class="card-right-lower">
+              <div class="stats">
+                <p>Last Week - <span class="time">10hrs</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dashboard-card">
+          <div class="card-bg self-care">
+            <img src="images\icon-self-care.svg" alt="Self-Care BG" />
+          </div>
+          <div class="card">
+            <div class="card-left">
+              <p class="title">Self Care</p>
+              <p class="time">2hrs</p>
+            </div>
+            <div class="card-right">
+              <div class="menu">...</div>
+            </div>
+            <div class="card-right-lower">
+              <div class="stats">
+                <p>Last Week - <span class="time">2hrs</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script href="script.js"></script>
+  </body>
+</html>

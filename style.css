@@ -1,0 +1,357 @@
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    background-color: var(--veryDarkBlue);
+    font-family: Rubik;
+  }
+  
+  *, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+  }
+  
+  :root {
+    /* primary */
+    --blue: hsl(246, 80%, 60%);
+    --lightRed-work: hsl(15, 100%, 70%);
+    --softBlue-play: hsl(195, 74%, 62%);
+    --lightRed-study: hsl(348, 100%, 68%);
+    --limeGreen-exercise: hsl(145, 58%, 55%);
+    --violet-social: hsl(264, 64%, 52%);
+    --softOrange-selfcare: hsl(43, 84%, 65%);
+    /* neutral */
+    --veryDarkBlue: hsl(226, 43%, 10%);
+    --darkBlue: hsl(235, 46%, 20%);
+    --desaturatedBlue: hsl(235, 45%, 61%);
+    --paleBlue: hsl(236, 100%, 87%);
+  }
+  
+  /* main container */
+  #main-container {
+    width: 100%;
+    height: 100%;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* profile container */
+  .profile-container {
+    width: 100%;
+    height: 206px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 24px;
+  }
+
+  .profile {
+    width: 100%;
+    height : 135px;
+    background-color: var(--blue);
+    color: #ffffff;
+    border-radius: 15px;
+    position: absolute;
+    top : 0;
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr;
+    gap: 15px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .profile-pic {
+    width : 20%;
+    margin-right: 15px;
+  }
+
+  .profile-pic img {
+    width: 70px;
+    height: 70px;
+    border: 2px solid white;
+    border-radius: 50%;
+  }
+
+  .profile-desc p {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.4;
+  }
+
+  .profile-desc p.name {
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  /* time interval */
+  .time-interval {
+
+    background-color: var(--darkBlue);
+    color: var(--paleBlue);
+    position: relative;
+    top: 10px;
+    height: 195px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    z-index: -1;
+    padding: 28px 35px 28px 35px;
+  }
+
+  .interval {
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+  }
+
+  .time-interval p {
+    margin-top: 120px;
+  }
+
+  .time-interval p:not(:last-child) {
+    margin-right: 55px;
+  }
+
+
+  /* dashboard cards */
+
+  .container {
+    width : 100%;
+  }
+
+  .dashboard-card {
+    width: 100%;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 24px;
+  }
+  
+  .work, .play, .study, .exercise, .social, .self-care {
+    height: 50px;
+    position: relative;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    z-index: -1;
+  }
+  
+  .card-bg {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .card-bg img {
+    height: 100%;
+    width: auto;
+    margin-right: 17px;
+  }
+  
+  /* card-bg color */
+  .work {
+    background-color: var(--lightRed-work);
+  }
+  
+  .play {
+    background-color: var(--softBlue-play);
+  }
+  
+  .study {
+    background-color: var(--lightRed-study);
+  }
+  
+  .exercise {
+    background-color: var(--limeGreen-exercise);
+  }
+  
+  .social {
+    background-color: var(--violet-social);
+  }
+  
+  .self-care {
+    background-color: var(--softOrange-selfcare);
+  }
+  
+  /* card */
+  .card {
+    width: 100%;
+    height: calc(100% - 40px);
+    background-color: var(--darkBlue);
+    border-radius: 15px;
+    position: absolute;
+    top : 40px;
+    color: #ffffff;
+    padding: 30px 25px 35px 25px;
+    /* display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 45px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .card-left p.title {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  .card-left p.time {
+    font-size: 32px;
+    font-weight: 400;
+  }
+
+  .card-right .menu {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    margin-right: 25px;
+    margin-top: 30px;
+  }
+
+  .card .card-right-lower {
+    display: flex;
+    align-content: flex-end;
+    flex-wrap: wrap;
+  }
+  .card .card-right-lower .stats {
+    justify-content: flex-end;
+    text-align: right;
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  /* interactive */
+  .interval-p:hover , .card:hover, .card-right .menu:hover{
+      cursor: pointer;
+    }
+
+    .card:hover {
+      background-color: var(--desaturatedBlue);
+    }
+
+    /* .time-interval:hover {
+      cursor: pointer;
+    } */
+
+    .interval-p {
+      z-index: 5;
+    }
+
+  @media (min-width : 1400px) {
+    #main-container {
+      max-width: 1080px;
+      max-height: 465px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      flex-direction: row;
+      margin: 0;
+    }   
+    
+    .profile-container {
+      width : 253px;
+      height : 467px;
+      margin-bottom: 0;
+      margin-right: 28px;
+    }
+
+    .profile {
+      height: 320px;
+      width: 253px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding : 28px;
+    }
+
+    .profile-pic {
+      width: 40%;
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+
+    .profile-pic img{
+      width: 120px;
+      height: 120px;
+    }
+
+    .profile-desc p {
+      width: 100%;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    .profile-desc p.name {
+      width: 50%;
+      font-size: 30px;
+      margin-top: 8px;
+    }
+
+    .time-interval {
+      height: 460px;
+      width : 253px;
+      margin: 0;
+    }
+
+    .interval {
+      flex-direction: column;
+      justify-content: space-evenly;
+      display: flex;
+    }
+
+    .interval p:not(:last-child) {
+      margin-right: auto;
+    }
+
+    .interval p{
+      margin-top: 0;
+      line-height: 2;
+    }
+
+    .interval p:is(:first-child) {
+      margin-top: 310px;
+    }
+
+    /* dashboard cards */
+
+    .container {
+      width: 800px;
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 28px;
+    }
+    .dashboard-card {
+      width: 248px;
+      margin-bottom: 55px;
+    }
+
+    .card-bg {
+      width: 248px;
+    }
+
+    .card {
+      height: 177px;
+      padding: 30px 35px 30px 35px;
+    }
+
+    .card-left p.title {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    .card-left p.time {
+      font-size: 35px;
+    }
+}
